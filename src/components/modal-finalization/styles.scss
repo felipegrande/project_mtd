@@ -1,0 +1,115 @@
+@import '../../styles/variables';
+
+.container__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include flex(center, center);
+    z-index: 999;
+
+    &_content {
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        background-color: $rose-50-color;
+
+        @media(min-width: 768px) {
+            padding: 40px;
+        }
+    }
+
+    &_title {
+        color: $rose-900-color;
+        @include font-styles(26px, 600);
+        margin: 15px 0 8px;
+    }
+
+    &_subTitle {
+        color: $rose-300-color;
+        @include font-styles(12px, 600);
+        @include reset-margin;
+
+    }
+
+    &_box {
+        background-color: $rose-100-color;
+        padding: 20px;
+        margin: 20px 0;
+
+        &_item {
+            width: 100%;
+            @include flex(center, space-between);
+            padding: 10px 0;
+            border-bottom: 1px solid $rose-300-color;
+        }
+
+        &_info {
+            @include flex(center, flex-end);
+            gap: 10px;
+        }
+
+        &_name {
+            color: $rose-900-color;
+            @include font-styles(14px, 600);
+            @include reset-margin;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        &_quantityValue {
+            @include flex(center, flex-start);
+            gap: 10px;
+
+            p {
+                @include reset-margin;
+            }
+
+            &_quantity {
+                color: $red-color;
+                @include font-styles(12px, 600)
+            }
+
+            &_price {
+                color: $rose-300-color;
+                @include font-styles(12px, 400)
+            }
+
+
+
+        }
+
+        &_price {
+            color: $rose-900-color;
+            @include font-styles(16px, 600);
+            @include reset-margin;
+        }
+
+        &_total {
+            @include flex(center, space-between);
+            margin-top: 20px;
+
+            p {
+                @include reset-margin;
+            }
+
+            &_text {
+                color: $rose-300-color;
+                @include font-styles(14px, 400);
+            }
+
+            &_totalprice {
+                color: $rose-900-color;
+                @include font-styles(28px, 600);
+            }
+        }
+    }
+
+    &_neworder {
+        @include primary-button;
+    }
+}

@@ -1,0 +1,78 @@
+@import '../../styles/variables';
+
+
+.container__addtocart {
+    @include flex(stretch, center);
+    margin-top: -20px;
+    z-index: 99;
+
+
+
+    &_content {
+        cursor: pointer;
+        @include flex(center, center);
+        background-color: $rose-50-color;
+        height: 40px;
+        width: 140px;
+        padding: 0 8px;
+        gap: 10px;
+        border: 1px solid $rose-500-color;
+        border-radius: 20px;
+
+        &.active {
+            background-color: $red-color;
+            justify-content: space-between;
+
+        }
+
+        &_quantityselector {
+            width: 100%;
+            @include flex(center, space-around);
+        }
+
+        &_box {
+            display: flex;
+            gap: 10px;
+        }
+
+        &:hover {
+            border-color: $red-color;
+
+            .container__addtocart_content_text {
+                color: $red-color;
+            }
+
+        }
+
+        &_value {
+            color: $rose-50-color;
+            @include font-styles(12px, 400);
+        }
+
+        &_remove,
+        &_add {
+            border: 1px solid $rose-50-color;
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            @include flex(center, center);
+            color: $rose-50-color;
+
+            &:hover {
+                background-color: $rose-50-color;
+                border-color: $red-color;
+
+                path {
+                    fill: $red-color
+                }
+            }
+        }
+
+        &_text {
+            @include reset-margin;
+            color: $rose-500-color ;
+            @include font-styles(14px, 600);
+        }
+    }
+
+}

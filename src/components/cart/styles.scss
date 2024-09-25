@@ -1,0 +1,113 @@
+@import '../../styles/variables';
+
+.container__cart {
+   background-color: $rose-50-color;
+   height: auto;
+   padding: 20px;
+   margin-top: 25px;
+
+   @media(min-width: 768px) {
+      @include reset-margin;
+
+   }
+
+   &_title {
+      color: $red-color;
+      @include font-styles(22px, 600);
+      @include reset-margin;
+   }
+
+   &_empty {
+      margin-top: 15px;
+      @include flex(center, center);
+      flex-direction: column
+   }
+
+   &_content {
+      @include flex(center, space-between);
+      padding: 10px 0;
+      border-bottom: 1px solid $rose-300-color;
+
+      &_itens {
+         @include flex(flex-start, space-between);
+         flex-direction: column;
+      }
+
+      &_name {
+         color: $rose-900-color;
+         @include font-styles(14px, 600);
+         @include reset-margin;
+      }
+
+      &_values {
+         @include flex(center, space-between);
+         gap: 15px;
+
+
+         p {
+            @include reset-margin;
+         }
+      }
+
+      &_quantity {
+         color: $red-color;
+         @include font-styles(12px, 600)
+      }
+
+      &_price {
+         color: $rose-300-color;
+         @include font-styles(12px, 400)
+      }
+
+      &_quantity_price {
+         color: $rose-400-color;
+         @include font-styles(12px, 600)
+      }
+   }
+
+   &_values {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &_delete {
+      border: 0.5px solid $rose-500-color;
+      border-radius: 100%;
+      width: 18px;
+      height: 18px;
+      @include flex(center, center);
+      cursor: pointer;
+      &:hover{
+         border-color: $rose-900-color;
+         path{
+            fill: $rose-900-color;
+         }
+      }
+   }
+
+   &_carbon {
+      background-color: $rose-100-color;
+      width: 100%;
+      @include flex(center, center);
+      @include font-styles(14px, 400);
+      margin: 20px 0;
+      padding: 10px;
+
+      img {
+         display: block;
+         margin-right: 10px;
+      }
+
+      span {
+         font-weight: 600;
+      }
+
+   }
+
+   &_buybutton {
+      @include primary-button;
+   }
+
+
+
+}

@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.container {
+
+   &_box {
+      border: 2px solid transparent;
+      border-radius: 4px;
+
+      &.active {
+         border-color: $red-color;
+      }
+
+      &_image {
+
+         img,
+         source {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+         }
+      }
+   }
+
+   &_name {
+      color: $rose-500-color;
+      @include font-styles(16px, 500);
+      margin: 7px 0;
+
+   }
+
+   &_category {
+      color: $rose-300-color;
+      @include font-styles(12px, 600);
+      margin: 12px 0 0;
+   }
+
+   &_value {
+      color: $red-color;
+      @include font-styles(18px, 600);
+      margin: 0 0 6px;
+   }
+
+}

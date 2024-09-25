@@ -1,0 +1,49 @@
+// Colors
+$red-color: hsl(14, 86%, 42%);
+$green-color: hsl(159, 69%, 38%);
+$rose-50-color: hsl(20, 50%, 98%);
+$rose-100-color: hsl(13, 31%, 94%);
+$rose-300-color: hsl(14, 25%, 72%);
+$rose-400-color: hsl(7, 20%, 60%);
+$rose-500-color: hsl(12, 20%, 44%);
+$rose-900-color: hsl(14, 65%, 9%);
+
+//fonts
+@mixin font-styles($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+
+//reset
+
+@mixin reset-margin {
+    margin: 0;
+}
+
+
+//flex
+
+@mixin flex($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+
+}
+
+//button
+
+@mixin primary-button {
+    background-color: $red-color;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    letter-spacing: 0.5px;
+    color: $rose-100-color;
+    @include font-styles(13px, 400);
+    height: 40px;
+
+    &:hover {
+        background-color: $rose-500-color;
+    }
+}

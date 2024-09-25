@@ -1,0 +1,18 @@
+@import './variables';
+@import './fonts.scss';
+
+
+body {
+  background-color: $rose-100-color;
+  position: relative;
+  margin: 0;
+  font-family: 'RedHatText', sans-serif;
+
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
